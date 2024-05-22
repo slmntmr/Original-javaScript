@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        const siparisVer = (cb) => { 
+            console.log("Siparis verdik");
+
+            setTimeout(()=>{
+                console.log("Siparis hazir")
+                cb("lahmacun")
+            },4000)
+        }
+
+
+
+        console.log("AVM'ye gittik")
+        console.log("Bowling oynadik");
+        console.log("Karnimiz acikti");
+        siparisVer((siparis)=>{
+            console.log("Siparisiniz alabilirsiniz")
+            console.log(`${siparis} yedik`);
+        });
+        
+        console.log("Ayakkabi bakmaya gittik")
+      
+    </script>
+
+</body>
+
+</html>

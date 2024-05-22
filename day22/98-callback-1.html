@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+
+<body>
+
+    <div id="lstData">DATA buraya gelecek</div>
+
+
+    <input type="text" name="" id="txtName" value="">
+
+    <script>
+
+
+        const getData = (cb) => {
+            setTimeout(() => {
+                /// .... API den data cekiliyor
+                const data = "John Doe";
+                cb(data);
+            }, 2000)
+        }
+
+
+        console.log("Hello 1")
+
+ 
+        getData((d) => {
+            document.getElementById("lstData").textContent = d;
+        });
+
+        console.log("Hello 3")
+
+
+        getData((d) => {
+            document.getElementById("txtName").value = d;
+        });
+
+    </script>
+
+</body>
+
+</html>

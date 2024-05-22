@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        const employee = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30,
+            department: "IT",
+            email: "john@doe.com",
+            phone: "12324523"
+        }
+
+
+        const message1 = `${employee.firstName} ${employee.lastName} isimli personel ${employee.department} departmaninda calismaktadir ve telefon nuamrasi ${employee.phone} dur.`
+
+
+       /*  const firstName = employee.firstName;
+        const lastName = employee.lastName;
+        const age = employee.age; */
+
+        const { firstName, lastName, department, phone } = employee;
+
+
+        const message2 = `${firstName} ${lastName} isimli personel ${department} departmaninda calismaktadir ve telefon nuamrasi ${phone} dur.`
+
+
+
+
+    </script>
+</body>
+
+</html>

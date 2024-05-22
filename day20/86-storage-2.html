@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+</head>
+
+<body>
+
+    <div id="counter">Uygulamamiza <span>ilk</span> defa girdiniz</div>
+
+    <script>
+
+        (() => {
+            let count = localStorage.getItem("count");
+            //if(!count) count=1;
+            count ??= 1;
+
+            if (count > 1) {
+                document.querySelector("#counter span").textContent = `${count}.`
+            }
+
+            count++;
+            localStorage.setItem("count", count);
+
+        })();
+
+
+
+    </script>
+</body>
+
+</html>

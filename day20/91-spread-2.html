@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread</title>
+</head>
+
+<body>
+
+
+    <script>
+        let cities = ["London", "Berlin", "Tokyo", "Sivas"];
+        cities = ["Zurih", ...cities, "Lisbon"];
+        console.log(cities)
+
+
+
+        let countries1 = ["Germany", "denmark", "Italy", "France"];
+        let countries2 = ["Mexico", "Singapur", "Japon"]
+
+        let countries = [...countries1, "Belgium", ...countries2];
+        console.log(countries);
+
+
+        // Bir dizi icindeki tekrar eden elemanlari silip unique bir dizi nasil olsuturulur
+
+        let colors = ["red", "green", "yellow", "purple", "orange", "yellow"];
+        let uniqueColors = [...new Set(colors)];
+        console.log(uniqueColors)
+
+
+
+
+    </script>
+
+</body>
+
+</html>
